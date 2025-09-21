@@ -1,0 +1,31 @@
+body,
+html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
+
+.container {
+    display: flex;
+    height: 100%;
+}
+
+.cell {
+    flex: 1;
+    height: 100%;
+    align-items: center;
+    display: flex;
+    text-align: left;
+}
+
+.left {
+    background-color: #6AACB4; 
+    border: 2px solid black; 
+    border-right: 0.1px solid black;
+}
+
+.right {
+    background-color: #F8B4B4; 
+    border: 2px solid black; 
+    border-left: 0.1px solid black;
+}
