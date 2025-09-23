@@ -1,0 +1,35 @@
+.parallax {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.first {
+    background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRvzTAz0n_p5GyzLkmRP0JZ-r_Cd0dEfUmbjw&s');
+}
+
+.second {
+    background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQUdEc7HTOfwkV0Qg3hEd-E-VlfQysjmIVrPQ&s');
+}
+
+.blok {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(32, 32, 32);
+    height: 50vh;
+}
+
+h1, h2 {
+    color: white;
+    text-shadow: 2px 2px 4px #3977e2;
+}
+
+h1 { font-size: 50px; }
+h2 { font-size: 30px; }

@@ -1,0 +1,60 @@
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    background-color: rgb(42, 41, 41);
+    box-shadow: 0 4px 8px 0 rgba(24, 89, 255, 0.2);
+    width: 500px;
+    height: 650px;
+    border-radius: 8px;
+    margin: 10px;
+    padding: 10px;
+    align-items: center;
+    gap: 10px;
+}
+
+.card img {
+    width: 90%;
+    height: 50%;
+    border-radius: 5px;
+    border: 2px solid rgb(255, 255, 255);
+}
+
+.title {
+    color: rgb(255, 255, 255);
+    font-size: 30px;
+    margin: 10px 0;
+    font-family: 'Segoe UI';
+}
+
+.detail {
+    color: rgb(255, 255, 255);
+    font-size: 20px;
+    margin: 5px 0;
+    font-family: 'Segoe UI';
+}
+
+.info {
+    align-self: flex-start;
+}
+
+.social {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    margin-top: auto;
+}
+
+.social img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    transition: transform 0.3s;
+}
