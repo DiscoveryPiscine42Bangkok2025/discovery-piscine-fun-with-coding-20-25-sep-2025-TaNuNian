@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>It’s over 9000</title>
+  <style>
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      font-family: Arial, sans-serif;
+    }
+    .calculator {
+      padding: 20px;
+      border: 2px solid #333;
+      border-radius: 10px;
+      background: #f8f8f8;
+    }
+    input, select {
+      margin: 5px;
+      padding: 5px;
+    }
+    input[type="submit"] {
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+  <div class="calculator">
+    <input type="text" id="left" placeholder="Left number">
+    <select id="operator">
+      <option value="+">+</option>
+      <option value="-">-</option>
+      <option value="*">*</option>
+      <option value="/">/</option>
+      <option value="%">%</option>
+    </select>
+    <input type="text" id="right" placeholder="Right number">
+    <input type="submit" value="Try me!" id="calcBtn">
+  </div>
+
+  <script>
+$(function() {
+    $("#calcBtn").on("click", function() {
+        const left = parseInt($("#left").val(), 10);
+        const right = parseInt($("#right").val(), 10);
+        const op = $("#operator").val();
+
+        if (isNaN(left) || isNaN(right) || left < 0 || right < 0) {
+            alert("Error :(");
+            console.log("Error :(");
+            return;
+        }
+
+        if ((op === "/" || op === "%") && right === 0) {
+            alert("It's over 9000!");
+            console.log("It's over 9000!");
+            return;
+        }
+
+        let result;
+        switch (op) {
+            case "+": result = left + right; break;
+            case "-": result = left - right; break;
+            case "*": result = left * right; break;
+            case "/": result = left / right; break;
+            case "%": result = left % right; break;
+        }
+
+        alert(result);
+        console.log(result);
+    });
+
+    setInterval(function() {
+        alert("Please, use me...");
+    }, 30000);
+});
+  </script>
+</body>
+</html>

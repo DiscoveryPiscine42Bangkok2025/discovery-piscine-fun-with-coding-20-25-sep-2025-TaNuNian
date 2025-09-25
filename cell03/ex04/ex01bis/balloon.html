@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Balloon</title>
+    <style>
+        .balloon {
+            width: 200px;
+            height: 200px;
+            background-color: red;
+            border-radius: 50%;
+            position: relative;
+            margin: 100px auto;
+            transition: all 0.5s ease-out;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="balloon" id="balloon"></div>
+
+    <script>
+        $(function () {
+            const $balloon = $('#balloon');
+            const colors = ['red', 'green', 'blue'];
+            let colorIndex = 0;
+
+            $balloon.on("click", function () {
+                let currentWidth = $balloon.width();
+
+                $balloon.width(currentWidth + 10);
+                $balloon.height(currentWidth + 10);
+
+                colorIndex = (colorIndex + 1) % colors.length;
+                $balloon.css('background-color', colors[colorIndex]);
+
+                if (currentWidth > 420) {
+                    $balloon.width(200);
+                    $balloon.height(200);
+                    $balloon.css('background-color', 'red');
+                    colorIndex = 0;
+                }
+            });
+
+            $balloon.on("mouseleave", function () {
+                let currentWidth = $balloon.width();
+
+                if (currentWidth > 200) {
+                    $balloon.width(currentWidth - 5);
+                    $balloon.height(currentWidth - 5);
+                }
+            });
+        });
+    </script>
+</body>
+
+</html>
