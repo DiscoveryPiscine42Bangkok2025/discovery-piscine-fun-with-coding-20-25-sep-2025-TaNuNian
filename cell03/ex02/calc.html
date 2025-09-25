@@ -51,14 +51,12 @@
       const right = parseInt(rightInput.value, 10);
       const op = operator.value;
 
-      // ตรวจสอบ input
       if (isNaN(left) || isNaN(right) || left < 0 || right < 0) {
         alert("Error :(");
         console.log("Error :(");
         return;
       }
 
-      // ตรวจสอบหารหรือ mod ด้วย 0
       if ((op === "/" || op === "%") && right === 0) {
         alert("It's over 9000!");
         console.log("It's over 9000!");
@@ -78,7 +76,6 @@
       console.log(result);
     });
 
-    // Alert ทุกๆ 30 วินาที
     setInterval(() => {
       alert("Please, use me...");
     }, 30000);
